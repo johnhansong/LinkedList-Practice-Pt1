@@ -12,21 +12,15 @@ class LinkedList {
   }
 
   addToHead(val) {
-    const newNode = {
-      value: val,
-      next: this.head,
-    }
-
+    const newNode= new LinkedListNode(val);
+    newNode.next=this.head;
     this.head = newNode;
     this.length++
   }
 
   addToTail(val) {
     // Your code here
-    const newNode={
-      value:val,
-      next:null,
-    };
+    const newNode= new LinkedListNode(val);
     this.length++;
     if(!this.head){
       this.head=newNode;
@@ -37,7 +31,6 @@ class LinkedList {
       }
       current.next=newNode;
     }
-
   }
 
   // You can use this function to help debug
